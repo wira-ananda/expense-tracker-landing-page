@@ -1,0 +1,73 @@
+---
+const ctaBenefits = [
+  "Mulai gratis tanpa proses yang rumit",
+  "Pantau keuangan lebih rapi setiap hari",
+  "Akses nyaman di mobile maupun web",
+];
+---
+
+<section
+  class="bg-[#fff] px-7 py-16 md:px-20 md:py-24"
+  aria-labelledby="cta-title"
+>
+  <div class="mx-auto w-full max-w-400">
+    <div class="mx-auto max-w-5xl text-center">
+      <h2
+        id="cta-title"
+        class="text-2xl font-bold tracking-[-0.04em] text-slate-950 md:text-6xl"
+      >
+        Siap Mengambil Kendali atas Keuangan Anda?
+      </h2>
+
+      <p
+        class="mx-auto mt-4 max-w-4xl text-sm font-medium leading-relaxed text-slate-600 md:text-2xl"
+      >
+        Bergabung bersama banyak pengguna yang mulai mengatur pemasukan,
+        pengeluaran, dan target anggaran dengan lebih tenang lewat
+        ExpenseTracker.
+      </p>
+
+      <ul
+        class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm font-medium text-slate-500 md:text-lg"
+        aria-label="Keunggulan utama ExpenseTracker"
+      >
+        {
+          ctaBenefits.map((benefit) => (
+            <li class="inline-flex items-center gap-2">
+              <span
+                class="inline-block h-2.5 w-2.5 rounded-full bg-emerald-500"
+                aria-hidden="true"
+              />
+              <span>{benefit}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div
+        class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5"
+      >
+        <a
+          href="/register"
+          class="inline-flex min-h-[56px] w-full items-center justify-center rounded-2xl bg-emerald-500 px-8 py-4 text-base font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 sm:w-auto sm:min-w-[240px] md:min-h-[64px] md:text-2xl"
+          aria-label="Mulai gratis dengan ExpenseTracker"
+        >
+          Mulai Gratis
+        </a>
+
+        <a
+          href="/login"
+          class="inline-flex min-h-[56px] w-full items-center justify-center rounded-2xl border-2 border-emerald-500 bg-transparent px-8 py-4 text-base font-bold text-emerald-500 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 sm:w-auto sm:min-w-[240px] md:min-h-[64px] md:text-2xl"
+          aria-label="Masuk ke akun ExpenseTracker"
+        >
+          Masuk ke Akun
+        </a>
+      </div>
+
+      <p class="mt-6 text-xs font-medium text-slate-400 md:text-base">
+        Cocok untuk kebutuhan harian, perencanaan bulanan, dan kebiasaan
+        finansial yang lebih sehat.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,151 @@
+---
+import { IoWallet } from "react-icons/io5";
+
+const productLinks = [
+  { label: "Fitur", href: "#features" },
+  { label: "Keamanan", href: "#security" },
+  { label: "Akses Mobile & Web", href: "#cross-platform" },
+];
+
+const legalLinks = [
+  { label: "Kebijakan Privasi", href: "/privacy-policy" },
+  { label: "Syarat & Ketentuan", href: "/terms-of-service" },
+  { label: "Kebijakan Cookie", href: "/cookie-policy" },
+];
+
+const supportLinks = [
+  { label: "Pusat Bantuan", href: "#help" },
+  { label: "Hubungi Kami", href: "#contact" },
+  { label: "FAQ", href: "#faq" },
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-[#071631] px-7 py-14 text-white md:px-20 md:py-16">
+  <div class="mx-auto w-full max-w-400">
+    <div
+      class="grid grid-cols-1 gap-12 md:grid-cols-[1.5fr_0.7fr_0.7fr_0.8fr] md:gap-10"
+    >
+      <section aria-labelledby="footer-brand-title" class="max-w-2xl">
+        <a
+          href="/"
+          class="inline-flex items-center gap-3 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071631]"
+          aria-label="Kembali ke beranda ExpenseTracker"
+        >
+          <span
+            class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500 text-white"
+            aria-hidden="true"
+          >
+            <IoWallet className="h-5 w-5" />
+          </span>
+
+          <span
+            id="footer-brand-title"
+            class="text-xl font-bold tracking-[-0.03em] text-white md:text-[2rem]"
+          >
+            ExpenseTracker
+          </span>
+        </a>
+
+        <p
+          class="mt-5 max-w-xl text-sm font-medium leading-relaxed text-slate-300 md:text-xl"
+        >
+          ExpenseTracker membantu Anda mengelola keuangan pribadi dengan cara
+          yang lebih sederhana, rapi, dan nyaman dipakai setiap hari.
+        </p>
+
+        <p class="mt-4 text-sm font-medium text-slate-400 md:text-lg">
+          Dibuat untuk mendukung kebiasaan finansial yang lebih tertata, baik di
+          mobile maupun web.
+        </p>
+      </section>
+
+      <nav aria-label="Navigasi produk">
+        <h2 class="text-lg font-bold tracking-[-0.02em] text-white md:text-2xl">
+          Produk
+        </h2>
+
+        <ul class="mt-5 space-y-4">
+          {
+            productLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm font-medium text-slate-300 transition-colors duration-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071631] md:text-xl"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <nav aria-label="Navigasi legal">
+        <h2 class="text-lg font-bold tracking-[-0.02em] text-white md:text-2xl">
+          Legal
+        </h2>
+
+        <ul class="mt-5 space-y-4">
+          {
+            legalLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm font-medium text-slate-300 transition-colors duration-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071631] md:text-xl"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <nav aria-label="Navigasi bantuan">
+        <h2 class="text-lg font-bold tracking-[-0.02em] text-white md:text-2xl">
+          Bantuan
+        </h2>
+
+        <ul class="mt-5 space-y-4">
+          {
+            supportLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm font-medium text-slate-300 transition-colors duration-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071631] md:text-xl"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mt-12 border-t border-white/10 pt-8">
+      <div
+        class="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left"
+      >
+        <p class="text-sm font-medium text-slate-400 md:text-xl">
+          © {currentYear} ExpenseTracker. Seluruh hak cipta dilindungi.
+        </p>
+
+        <p class="text-sm font-normal text-slate-400 md:text-xl">
+          created by{" "}
+          <a
+            href="https://wiraananda.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold text-slate-200 transition-colors duration-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071631]"
+            aria-label="Kunjungi portfolio wiraa"
+          >
+            wiraa
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
