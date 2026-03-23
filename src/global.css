@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  /* Daftarkan Poppins sebagai font-sans utama */
+  --font-poppins:
+    "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Pastikan seluruh body menggunakan font ini */
+body {
+  font-family: var(--font-poppins);
+}

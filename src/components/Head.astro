@@ -1,0 +1,78 @@
+---
+// Define props dengan default value untuk SEO
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = "Expense Tracker | Solusi Keuangan Kamu!",
+  description = "Aplikasi pencatatan keuangan yang cepat, sederhana, dan efisien. Kelola pengeluaran harianmu tanpa ribet.",
+  image = "/og-cover.png", // Pastikan file ini ada di folder public/
+  noindex = false,
+} = Astro.props;
+
+// Membuat URL absolut untuk canonical dan social media
+// Pastikan "site" sudah diisi di astro.config.mjs
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.site);
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<link rel="canonical" href={canonicalURL} />
+
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="theme-color" content="#0f172a" />
+
+<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={socialImageURL} />
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={socialImageURL} />
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Expense Tracker",
+    "operatingSystem": "Web",
+    "applicationCategory": "FinanceApplication",
+    "description": "Aplikasi pencatatan keuangan yang cepat, sederhana, dan efisien.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "IDR"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "100"
+    }
+  }
+</script>
