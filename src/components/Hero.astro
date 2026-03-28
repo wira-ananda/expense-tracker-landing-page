@@ -13,11 +13,11 @@ import {
 >
   <div class="absolute inset-0 z-0">
     <div
-      class="absolute inset-0 bg-gradient-to-b from-emerald-900/50 to-slate-950"
+      class="absolute inset-0 bg-gradient-to-b from-emerald-900/40 to-slate-950"
     >
     </div>
     <div
-      class="absolute inset-0 opacity-[0.2]"
+      class="absolute inset-0 opacity-[0.15]"
       style="background-image: radial-gradient(#10b981 0.5px, transparent 0.5px); background-size: 24px 24px;"
     >
     </div>
@@ -30,7 +30,7 @@ import {
       class="flex flex-col items-center text-center lg:items-start lg:text-left"
     >
       <div
-        class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/20 px-4 py-1.5 backdrop-blur-md"
+        class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 backdrop-blur-md"
       >
         <span class="relative flex h-2 w-2">
           <span
@@ -40,7 +40,7 @@ import {
           ></span>
         </span>
         <span
-          class="text-[10px] font-bold uppercase tracking-widest text-emerald-200 md:text-xs"
+          class="text-[10px] font-bold uppercase tracking-widest text-emerald-300 md:text-xs"
           >Update v2.0 Kini Tersedia</span
         >
       </div>
@@ -56,7 +56,7 @@ import {
       </h1>
 
       <p
-        class="mt-6 max-w-xl text-balance text-base leading-relaxed text-slate-100 md:text-xl font-medium"
+        class="mt-6 max-w-xl text-balance text-base leading-relaxed text-slate-200 md:text-xl font-medium"
       >
         Berhenti menebak ke mana uang Anda pergi. Atur budget otomatis dan catat
         pengeluaran hanya dalam hitungan detik dengan sistem yang simpel.
@@ -67,7 +67,7 @@ import {
       >
         {
           ["Tanpa Kartu Kredit", "Setup 1 Menit"].map((text) => (
-            <div class="flex items-center gap-2 text-sm font-semibold text-emerald-300">
+            <div class="flex items-center gap-2 text-sm font-bold text-emerald-400">
               <IoCheckmarkCircle
                 className="h-5 w-5 shrink-0"
                 aria-hidden="true"
@@ -93,7 +93,7 @@ import {
         </a>
         <a
           href="#demo"
-          class="inline-flex items-center justify-center rounded-2xl border-2 border-white/20 bg-white/10 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/40 outline-none focus-visible:ring-2 focus-visible:ring-white"
+          class="inline-flex items-center justify-center rounded-2xl border-2 border-white/20 bg-white/5 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/40 outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           Lihat Demo
         </a>
@@ -108,47 +108,45 @@ import {
       </div>
 
       <article
-        class="relative z-10 w-full transform rounded-[2.5rem] bg-white p-4 shadow-2xl ring-1 ring-white/20 transition-all duration-500 ease-out lg:rotate-3 lg:hover:rotate-0 lg:hover:scale-[1.02]"
+        class="relative z-10 w-full transform rounded-[2.5rem] bg-white p-4 shadow-2xl ring-1 ring-slate-200 transition-all duration-500 ease-out lg:rotate-3 lg:hover:rotate-0 lg:hover:scale-[1.02]"
       >
-        <div
-          class="rounded-4xl bg-slate-100 p-5 md:p-6 border border-slate-200"
-        >
+        <div class="rounded-4xl bg-slate-50 p-5 md:p-6 border border-slate-200">
           <div class="flex items-center justify-between mb-6">
             <div>
               <p
-                class="text-[10px] font-bold uppercase tracking-widest text-slate-600"
+                class="text-[10px] font-bold uppercase tracking-widest text-slate-700"
               >
                 Total Saldo
               </p>
-              <p class="text-2xl font-black text-slate-900 md:text-3xl">
+              <p class="text-2xl font-black text-slate-950 md:text-3xl">
                 Rp12.800.000
               </p>
             </div>
             <time
               datetime="2025-12"
-              class="rounded-lg bg-emerald-700 px-3 py-1 text-[10px] font-bold text-white shadow-sm"
+              class="rounded-lg bg-emerald-800 px-3 py-1 text-[10px] font-bold text-white shadow-sm"
               >Des 2025</time
             >
           </div>
 
           <div class="grid grid-cols-2 gap-3">
             <div
-              class="rounded-2xl bg-white p-3 md:p-4 shadow-sm border border-emerald-200"
+              class="rounded-2xl bg-white p-3 md:p-4 shadow-sm border border-emerald-100"
             >
-              <span class="text-[9px] font-bold uppercase text-emerald-700"
+              <span class="text-[9px] font-black uppercase text-emerald-800"
                 >Masuk</span
               >
-              <p class="text-base font-black text-emerald-800 md:text-lg">
+              <p class="text-base font-black text-emerald-900 md:text-lg">
                 6.5jt
               </p>
             </div>
             <div
-              class="rounded-2xl bg-white p-3 md:p-4 shadow-sm border border-rose-200"
+              class="rounded-2xl bg-white p-3 md:p-4 shadow-sm border border-rose-100"
             >
-              <span class="text-[9px] font-bold uppercase text-rose-700"
+              <span class="text-[9px] font-black uppercase text-rose-800"
                 >Keluar</span
               >
-              <p class="text-base font-black text-rose-800 md:text-lg">4.2jt</p>
+              <p class="text-base font-black text-rose-900 md:text-lg">4.2jt</p>
             </div>
           </div>
         </div>
@@ -156,12 +154,12 @@ import {
         <div class="mt-6 px-2 pb-2">
           <div class="flex items-center justify-between mb-4">
             <h2
-              class="text-xs font-bold text-slate-900 uppercase tracking-tight"
+              class="text-xs font-black text-slate-900 uppercase tracking-wider"
             >
               Aktivitas Terbaru
             </h2>
             <button
-              class="text-[10px] font-bold text-emerald-700 hover:text-emerald-800 hover:underline outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
+              class="text-[10px] font-bold text-emerald-800 hover:text-emerald-900 hover:underline outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 rounded px-1"
               >Semua</button
             >
           </div>
@@ -184,14 +182,14 @@ import {
                   icon: IoBriefcase,
                 },
               ].map((item) => (
-                <div class="flex items-center justify-between rounded-xl p-2 transition-colors hover:bg-slate-100">
+                <div class="flex items-center justify-between rounded-xl p-2 transition-colors hover:bg-slate-50">
                   <div class="flex items-center gap-3">
                     <div
                       class:list={[
                         "flex h-9 w-9 items-center justify-center rounded-lg",
                         item.type === "out"
-                          ? "bg-rose-100 text-rose-700"
-                          : "bg-emerald-100 text-emerald-700",
+                          ? "bg-rose-100 text-rose-800"
+                          : "bg-emerald-100 text-emerald-800",
                       ]}
                       aria-hidden="true"
                     >
@@ -201,7 +199,7 @@ import {
                       <p class="text-sm font-bold text-slate-900">
                         {item.title}
                       </p>
-                      <p class="text-[10px] text-slate-600 font-medium">
+                      <p class="text-[10px] text-slate-800 font-semibold">
                         {item.date}
                       </p>
                     </div>
@@ -210,8 +208,8 @@ import {
                     class:list={[
                       "text-sm font-black",
                       item.type === "out"
-                        ? "text-rose-700"
-                        : "text-emerald-700",
+                        ? "text-rose-800"
+                        : "text-emerald-800",
                     ]}
                   >
                     {item.price}
