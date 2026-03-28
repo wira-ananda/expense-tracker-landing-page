@@ -108,7 +108,6 @@ import {
       </div>
 
       <article
-        aria-label="Simulasi Dashboard Pengeluaran"
         class="relative z-10 w-full transform rounded-[2.5rem] bg-white p-4 shadow-2xl ring-1 ring-white/20 transition-all duration-500 ease-out lg:rotate-3 lg:hover:rotate-0 lg:hover:scale-[1.02]"
       >
         <div
@@ -156,9 +155,13 @@ import {
 
         <div class="mt-6 px-2 pb-2">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="text-xs font-bold text-slate-900">Aktivitas Terbaru</h3>
+            <h2
+              class="text-xs font-bold text-slate-900 uppercase tracking-tight"
+            >
+              Aktivitas Terbaru
+            </h2>
             <button
-              class="text-[10px] font-bold text-emerald-700 hover:underline outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
+              class="text-[10px] font-bold text-emerald-700 hover:text-emerald-800 hover:underline outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
               >Semua</button
             >
           </div>
@@ -190,8 +193,9 @@ import {
                           ? "bg-rose-100 text-rose-700"
                           : "bg-emerald-100 text-emerald-700",
                       ]}
+                      aria-hidden="true"
                     >
-                      <item.icon size={18} aria-hidden="true" />
+                      <item.icon size={18} />
                     </div>
                     <div>
                       <p class="text-sm font-bold text-slate-900">
