@@ -1,14 +1,7 @@
 ---
 import { IoStar, IoPersonCircle } from "react-icons/io5";
 
-type Testimonial = {
-  name: string;
-  role: string;
-  content: string;
-  rating: number;
-};
-
-const testimonials: Testimonial[] = [
+const testimonials = [
   {
     name: "Andi Saputra",
     role: "Freelancer",
@@ -24,7 +17,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    name: "Budi darmawan",
+    name: "Budi Darmawan",
     role: "Karyawan Swasta",
     content:
       "Dashboard analitiknya rapi. Saya jadi tahu kalau pengeluaran kopi saya ternyata lumayan besar.",
@@ -42,11 +35,13 @@ const testimonials: Testimonial[] = [
     <header class="mx-auto max-w-3xl text-center">
       <h2
         id="testimonials-title"
-        class="text-balance text-3xl font-black tracking-tight text-slate-900 sm:text-4xl md:text-5xl"
+        class="text-balance text-3xl font-black tracking-tight text-slate-950 sm:text-4xl md:text-5xl"
       >
-        Apa Kata <span class="text-emerald-600">Mereka?</span>
+        Apa Kata <span class="text-emerald-700">Mereka?</span>
       </h2>
-      <p class="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+      <p
+        class="mt-4 text-base leading-relaxed text-slate-700 font-medium md:text-lg"
+      >
         Ribuan orang telah mengubah kebiasaan finansial mereka menjadi lebih
         sehat.
       </p>
@@ -55,36 +50,40 @@ const testimonials: Testimonial[] = [
     <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {
         testimonials.map((item) => (
-          <article class="flex flex-col justify-between rounded-3xl border border-slate-100 bg-slate-50/50 p-8 transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-emerald-500/5">
+          <article class="flex flex-col justify-between rounded-3xl border border-slate-200 bg-slate-50 p-8 transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-emerald-600/5">
             <div>
               <div
-                class="mb-4 flex gap-1 text-emerald-500"
+                class="mb-4 flex gap-1 text-emerald-600"
                 aria-label={`Rating ${item.rating} dari 5 bintang`}
               >
                 {[...Array(5)].map((_, i) => (
                   <IoStar
                     className={
-                      i < item.rating ? "fill-emerald-500" : "fill-slate-200"
+                      i < item.rating ? "fill-emerald-600" : "fill-slate-300"
                     }
                     size={16}
+                    aria-hidden="true"
                   />
                 ))}
               </div>
-
-              <blockquote class="text-base leading-relaxed text-slate-700 italic">
+              <blockquote class="text-base leading-relaxed text-slate-900 font-medium italic">
                 "{item.content}"
               </blockquote>
             </div>
-
-            <footer class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-6">
-              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+            <footer class="mt-8 flex items-center gap-4 border-t border-slate-200 pt-6">
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700"
+                aria-hidden="true"
+              >
                 <IoPersonCircle size={40} />
               </div>
               <div class="min-w-0">
-                <p class="truncate text-sm font-bold text-slate-900">
+                <p class="truncate text-sm font-bold text-slate-950">
                   {item.name}
                 </p>
-                <p class="text-xs font-medium text-slate-500">{item.role}</p>
+                <p class="text-xs font-bold text-slate-700 uppercase tracking-wide">
+                  {item.role}
+                </p>
               </div>
             </footer>
           </article>
@@ -93,10 +92,3 @@ const testimonials: Testimonial[] = [
     </div>
   </div>
 </section>
-
-<style is:global>
-  /* Menjamin scrolling yang presisi dari header */
-  #testimonials {
-    scroll-margin-top: 6rem;
-  }
-</style>

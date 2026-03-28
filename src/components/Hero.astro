@@ -13,11 +13,11 @@ import {
 >
   <div class="absolute inset-0 z-0">
     <div
-      class="absolute inset-0 bg-linear-to-b from-emerald-900/40 to-slate-950"
+      class="absolute inset-0 bg-gradient-to-b from-emerald-900/50 to-slate-950"
     >
     </div>
     <div
-      class="absolute inset-0 opacity-[0.15]"
+      class="absolute inset-0 opacity-[0.2]"
       style="background-image: radial-gradient(#10b981 0.5px, transparent 0.5px); background-size: 24px 24px;"
     >
     </div>
@@ -30,17 +30,17 @@ import {
       class="flex flex-col items-center text-center lg:items-start lg:text-left"
     >
       <div
-        class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 backdrop-blur-md"
+        class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/20 px-4 py-1.5 backdrop-blur-md"
       >
         <span class="relative flex h-2 w-2">
           <span
             class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"
           ></span>
-          <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"
           ></span>
         </span>
         <span
-          class="text-[10px] font-bold uppercase tracking-widest text-emerald-300 md:text-xs"
+          class="text-[10px] font-bold uppercase tracking-widest text-emerald-200 md:text-xs"
           >Update v2.0 Kini Tersedia</span
         >
       </div>
@@ -50,13 +50,13 @@ import {
         class="text-balance text-4xl font-black leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
       >
         Kelola Uang Lebih <span
-          class="bg-linear-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent"
+          class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent"
           >Tenang.</span
         >
       </h1>
 
       <p
-        class="mt-6 max-w-xl text-balance text-base leading-relaxed text-slate-300 md:text-xl opacity-90"
+        class="mt-6 max-w-xl text-balance text-base leading-relaxed text-slate-100 md:text-xl font-medium"
       >
         Berhenti menebak ke mana uang Anda pergi. Atur budget otomatis dan catat
         pengeluaran hanya dalam hitungan detik dengan sistem yang simpel.
@@ -67,8 +67,11 @@ import {
       >
         {
           ["Tanpa Kartu Kredit", "Setup 1 Menit"].map((text) => (
-            <div class="flex items-center gap-2 text-sm font-medium text-emerald-400/90">
-              <IoCheckmarkCircle className="h-5 w-5 shrink-0" />
+            <div class="flex items-center gap-2 text-sm font-semibold text-emerald-300">
+              <IoCheckmarkCircle
+                className="h-5 w-5 shrink-0"
+                aria-hidden="true"
+              />
               <span>{text}</span>
             </div>
           ))
@@ -80,17 +83,17 @@ import {
       >
         <a
           href="/register"
-          class="group inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-500 px-8 py-4 text-base font-bold text-white transition-all hover:bg-emerald-400 hover:shadow-xl hover:shadow-emerald-500/20 active:scale-95"
+          class="group inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-8 py-4 text-base font-bold text-white transition-all hover:bg-emerald-500 hover:shadow-xl hover:shadow-emerald-600/20 active:scale-95 outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           Mulai Gratis
           <IoArrowForward
             className="transition-transform group-hover:translate-x-1"
+            aria-hidden="true"
           />
         </a>
-
         <a
           href="#demo"
-          class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/20"
+          class="inline-flex items-center justify-center rounded-2xl border-2 border-white/20 bg-white/10 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/40 outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           Lihat Demo
         </a>
@@ -100,20 +103,21 @@ import {
     <div class="relative mx-auto w-full max-w-md lg:ml-auto lg:mr-0">
       <div
         class="absolute -inset-10 z-0 bg-emerald-500/20 blur-[100px] rounded-full"
+        aria-hidden="true"
       >
       </div>
 
       <article
         aria-label="Simulasi Dashboard Pengeluaran"
-        class="relative z-10 w-full transform rounded-[2.5rem] bg-white p-4 shadow-2xl ring-1 ring-white/20 transition-all duration-700 hover:rotate-0 lg:rotate-3"
+        class="relative z-10 w-full transform rounded-[2.5rem] bg-white p-4 shadow-2xl ring-1 ring-white/20 transition-all duration-500 ease-out lg:rotate-3 lg:hover:rotate-0 lg:hover:scale-[1.02]"
       >
         <div
-          class="rounded-4xl bg-slate-50/80 p-5 md:p-6 border border-slate-100"
+          class="rounded-4xl bg-slate-100 p-5 md:p-6 border border-slate-200"
         >
           <div class="flex items-center justify-between mb-6">
             <div>
               <p
-                class="text-[10px] font-bold uppercase tracking-widest text-slate-400"
+                class="text-[10px] font-bold uppercase tracking-widest text-slate-600"
               >
                 Total Saldo
               </p>
@@ -122,39 +126,39 @@ import {
               </p>
             </div>
             <time
-              datetime="2024-12"
-              class="rounded-lg bg-green-100 px-3 py-1 text-[10px] font-bold shadow-sm ring-1 ring-slate-200"
+              datetime="2025-12"
+              class="rounded-lg bg-emerald-700 px-3 py-1 text-[10px] font-bold text-white shadow-sm"
               >Des 2025</time
             >
           </div>
 
           <div class="grid grid-cols-2 gap-3">
             <div
-              class="rounded-2xl bg-white p-3 md:p-4 shadow-sm border border-emerald-50"
+              class="rounded-2xl bg-white p-3 md:p-4 shadow-sm border border-emerald-200"
             >
-              <span class="text-[9px] font-bold uppercase text-emerald-600"
+              <span class="text-[9px] font-bold uppercase text-emerald-700"
                 >Masuk</span
               >
-              <p class="text-base font-black text-emerald-700 md:text-lg">
+              <p class="text-base font-black text-emerald-800 md:text-lg">
                 6.5jt
               </p>
             </div>
             <div
-              class="rounded-2xl bg-white p-3 md:p-4 shadow-sm border border-rose-50"
+              class="rounded-2xl bg-white p-3 md:p-4 shadow-sm border border-rose-200"
             >
-              <span class="text-[9px] font-bold uppercase text-rose-600"
+              <span class="text-[9px] font-bold uppercase text-rose-700"
                 >Keluar</span
               >
-              <p class="text-base font-black text-rose-700 md:text-lg">4.2jt</p>
+              <p class="text-base font-black text-rose-800 md:text-lg">4.2jt</p>
             </div>
           </div>
         </div>
 
         <div class="mt-6 px-2 pb-2">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="text-xs font-bold text-slate-800">Aktivitas Terbaru</h3>
+            <h3 class="text-xs font-bold text-slate-900">Aktivitas Terbaru</h3>
             <button
-              class="text-[10px] font-bold text-emerald-600 hover:underline"
+              class="text-[10px] font-bold text-emerald-700 hover:underline outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
               >Semua</button
             >
           </div>
@@ -177,31 +181,33 @@ import {
                   icon: IoBriefcase,
                 },
               ].map((item) => (
-                <div class="flex items-center justify-between rounded-xl p-2 transition-colors hover:bg-slate-50">
+                <div class="flex items-center justify-between rounded-xl p-2 transition-colors hover:bg-slate-100">
                   <div class="flex items-center gap-3">
                     <div
                       class:list={[
                         "flex h-9 w-9 items-center justify-center rounded-lg",
                         item.type === "out"
-                          ? "bg-rose-50 text-rose-600"
-                          : "bg-emerald-50 text-emerald-600",
+                          ? "bg-rose-100 text-rose-700"
+                          : "bg-emerald-100 text-emerald-700",
                       ]}
                     >
-                      <item.icon size={18} />
+                      <item.icon size={18} aria-hidden="true" />
                     </div>
                     <div>
-                      <p class="text-sm font-bold text-slate-800">
+                      <p class="text-sm font-bold text-slate-900">
                         {item.title}
                       </p>
-                      <p class="text-[10px] text-slate-400">{item.date}</p>
+                      <p class="text-[10px] text-slate-600 font-medium">
+                        {item.date}
+                      </p>
                     </div>
                   </div>
                   <span
                     class:list={[
                       "text-sm font-black",
                       item.type === "out"
-                        ? "text-rose-600"
-                        : "text-emerald-600",
+                        ? "text-rose-700"
+                        : "text-emerald-700",
                     ]}
                   >
                     {item.price}
